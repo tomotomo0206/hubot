@@ -22,4 +22,7 @@ module.exports = (robot) ->
 
   robot.hear  /神/i, (msg) ->
     msg.reply "綱様"
+    
+  robot.hear  /グルグル/i, (msg) ->
+    msg.reply "https://www.google.co.jp"
 
