@@ -10,7 +10,7 @@
 
 module.exports = (robot) ->
 
-ans = ['goo', 'chaoaki', 'pa']
+ans = ['グー', 'チョキi', 'パー']
 
 module.exports = (robot) ->
   robot.respond /janken/i, (msg) ->
