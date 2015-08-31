@@ -10,6 +10,6 @@
 cron = require('cron').CronJob
 
 module.exports = (robot) ->
-  new cron '0 0 16 * * 1-5', () =>
-    robot.send {room: "#general"}, "朝会だお"
+  new cron '0 5 16 * * 1-5', () =>
+    robot.send {room: "#qa"}, "朝チェックをはじめましょう"
   , null, true, "Asia/Tokyo"
