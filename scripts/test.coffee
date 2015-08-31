@@ -48,6 +48,8 @@ module.exports = (robot) ->
       if day == 3 then forecast = 'わからんす' else forecast = json['forecasts'][day]['telop']
       msg.reply forecast
       
-  robot.hear  /寿限無/i, (msg) ->
+  robot.hear  /jugemu/i, (msg) ->
+    msg.reply "Jugemu of Jugemu Miyuki worn paddle of gravel Suigyo crowded the end of the line Unrai of pine Fuurai pine dwells at Kuuneru broken Koji bra construction Paipo Paipo Paipo shoe Ringan shoe Ringan of Gurindai Gurindai of Ponpo copies of the butterfly life-saving Ponpokona Chosuke"
+
 
       
