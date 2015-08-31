@@ -29,3 +29,13 @@ module.exports = (robot) ->
   new cron '0 45 18 * * 1-5', () =>
     robot.send {room: "#qa"}, "明日も死ぬ気でバグを見つけましょう"
   , null, true, "Asia/Tokyo"
+  
+  new cron '0 0 10 * * 1-5', () =>
+    robot.send {room: "#general"}, "今日もユーザーファーストの精神で一日頑張ってください"
+  , null, true, "Asia/Tokyo"
+
+  new cron '0 45 18 * * 1-5', () =>
+    robot.send {room: "#general"}, "ユーザーのことなんか忘れてゆっくり休みましょう"
+  , null, true, "Asia/Tokyo"
+
+
