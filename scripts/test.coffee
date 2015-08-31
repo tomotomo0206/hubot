@@ -23,8 +23,6 @@ module.exports = (robot) ->
   robot.hear  /神/i, (msg) ->
     msg.reply "綱様"
     
-  robot.hear  /天気/i, (msg) ->
-    msg.reply "https://www.google.co.jp/search?q=%E5%A4%A9%E6%B0%97&ie=utf-8&oe=utf-8&hl=ja"
 
   robot.hear  /運行/i, (msg) ->
     msg.reply "http://transit.yahoo.co.jp/traininfo/area/4/"
@@ -40,7 +38,7 @@ module.exports = (robot) ->
       else
         day = 3
         break
-    request = msg.http('http://weather.livedoor.com/forecast/webservice/json/v1?city=270000')
+    request = msg.http('http://weather.livedoor.com/forecast/webservice/json/v1?city=130010')
     .get()
     request (err, res, body) ->
       json = JSON.parse body
