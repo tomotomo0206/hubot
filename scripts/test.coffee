@@ -22,3 +22,6 @@ module.exports = (robot) ->
 
   robot.hear  /神/i, (msg) ->
     msg.reply "綱様"
+    
+      robot.hear  /天気/i, (msg) ->
+    msg.reply "https://www.google.co.jp/search?q=%E5%A4%A9%E6%B0%97&ie=utf-8&oe=utf-8&hl=ja"
