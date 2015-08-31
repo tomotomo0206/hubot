@@ -15,3 +15,8 @@ ans = ['グー', 'チョキi', 'パー']
 module.exports = (robot) ->
   robot.respond /janken/i, (msg) ->
     msg.reply msg.random ans
+
+
+  robot.hear  /アカウント/i, (msg) ->
+    msg.reply "(ID: cv_operation_group@carview.co.jp　PASS:6165!appleCV)"
+
