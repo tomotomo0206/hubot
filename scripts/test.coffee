@@ -47,3 +47,7 @@ module.exports = (robot) ->
       json = JSON.parse body
       if day == 3 then forecast = 'わからんす' else forecast = json['forecasts'][day]['telop']
       msg.reply forecast
+      
+  robot.hear  /寿限無/i, (msg) ->
+
+      
