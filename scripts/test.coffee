@@ -27,7 +27,7 @@ module.exports = (robot) ->
   robot.hear  /運行/i, (msg) ->
     msg.reply "http://transit.yahoo.co.jp/traininfo/area/4/"
     
-  robot.hear /(.*)の天気教えて/i, (msg) ->
+  robot.hear /(.*)の天気/i, (msg) ->
    switch msg.match[1]
       when '今日'
         day = 0
