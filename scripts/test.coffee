@@ -10,11 +10,11 @@
 
 module.exports = (robot) ->
 
-ans = ['グー', 'チョキi', 'パー']
+ram = ['味噌ラーメンがオススメ', '豚骨ラーメンがオススメ', '塩ラーメンがオススメ', '醤油ラーメンがオススメ', '社畜カップ麺がオススメ']
 
 module.exports = (robot) ->
-  robot.respond /janken/i, (msg) ->
-    msg.reply msg.random ans
+  robot.hear /ラーメン/i, (msg) ->
+    msg.reply msg.random ram
 
 
   robot.hear  /アカウント/i, (msg) ->
@@ -51,8 +51,4 @@ module.exports = (robot) ->
   robot.hear  /jugemu/i, (msg) ->
     msg.reply "Jugemu of Jugemu Miyuki worn paddle of gravel Suigyo crowded the end of the line Unrai of pine Fuurai pine dwells at Kuuneru broken Koji bra construction Paipo Paipo Paipo shoe Ringan shoe Ringan of Gurindai Gurindai of Ponpo copies of the butterfly life-saving Ponpokona Chosuke"
 
-ram = ['味噌ラーメンがオススメ', '豚骨ラーメンがオススメ', '塩ラーメンがオススメ', '醤油ラーメンがオススメ', '社畜カップ麺がオススメ']
-
-  robot.hear /ラーメン/i, (msg) ->
-    msg.reply msg.random ram
       
