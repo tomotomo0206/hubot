@@ -15,11 +15,15 @@ module.exports = (robot) ->
   , null, true, "Asia/Tokyo"
 
   new cron '0 1 10 * * 1-5', () =>
-    robot.send {room: "#qa"}, "朝チェックで呑気にバグを見つけましょう"
+    robot.send {room: "#qa"}, "朝チェックをとっとと始めましょう"
   , null, true, "Asia/Tokyo"
 
   new cron '0 0 13 * * 1-5', () =>
-    robot.send {room: "#qa"}, "お昼の時間です。"
+    robot.send {room: "#qa"}, "お昼の時間です。腹八分目で"
+  , null, true, "Asia/Tokyo"
+
+  new cron '0 0 13 * * 1-5', () =>
+    robot.send {room: "#general"}, "お昼ごはんです。今日は何ラーメン？"
   , null, true, "Asia/Tokyo"
 
   new cron '0 0 14 * * 1-5', () =>
@@ -31,7 +35,7 @@ module.exports = (robot) ->
   , null, true, "Asia/Tokyo"
   
   new cron '0 0 10 * * 1-5', () =>
-    robot.send {room: "#general"}, "今日もユーザーファーストの精神で一日頑張ってください"
+    robot.send {room: "#general"}, "おはようございます。いつ本気出す？明日でしょ！！今日もユーザーファーストの精神で一日頑張ってください"
   , null, true, "Asia/Tokyo"
 
   new cron '0 45 18 * * 1-5', () =>
