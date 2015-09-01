@@ -53,7 +53,6 @@ module.exports = (robot) ->
 
 ram = ['味噌ラーメンがオススメ', '豚骨ラーメンがオススメ', '塩ラーメンがオススメ', '醤油ラーメンがオススメ', '社畜カップ麺がオススメ']
 
-module.exports = (robot) ->
   robot.hear /ラーメン/i, (msg) ->
     msg.reply msg.random ram
       
