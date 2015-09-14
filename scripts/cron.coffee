@@ -38,8 +38,8 @@ module.exports = (robot) ->
     robot.send {room: "#general"}, "おはようございます。いつ本気出す？明日でしょ！！今日もユーザーファーストの精神で一日頑張ってください"
   , null, true, "Asia/Tokyo"
 
-  new cron '0 45 18 * * 1-5', () =>
-    robot.send {room: "#general"}, "ユーザーのことなんか忘れてゆっくり休みましょう"
+  new cron '0 00 19 * * 1-5', () =>
+    robot.send {room: "#general"}, "明日もユーザーファーストの精神で頑張りましょう"
   , null, true, "Asia/Tokyo"
 
 
