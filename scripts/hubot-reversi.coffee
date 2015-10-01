@@ -8,7 +8,7 @@
 #  None
 #
 # Commands:
-#  hubot game start - ƒIƒZƒƒQ[ƒ€ŠJn‚·‚é
+#  hubot game start - ã‚ªã‚»ãƒ­ã‚²ãƒ¼ãƒ é–‹å§‹ã™ã‚‹
 #
 # Notes:
 #
@@ -17,20 +17,20 @@
 #  minegishi@wpuzzle.com
 
 module.exports = (robot) ->
-  robot.hear /(–|ƒ}ƒOƒ|Ï¸ŞÛ|‚Ü‚®‚ë|tuna|Tuna|TUNA)/i, (msg) ->
-    msg.send "‚ ‚é‚æ‚Á:sushi:"
+  robot.hear /(é®ª|ãƒã‚°ãƒ­|ï¾ï½¸ï¾ï¾›|ã¾ãã‚|tuna|Tuna|TUNA)/i, (msg) ->
+    msg.send "ã‚ã‚‹ã‚ˆã£:sushi:"
 
 
   robot.hear /navico game start/i, (msg) ->
     bordArray = [
-      [" ", " ", " ", " ", " ", " ", " ", " "],
-      [" ", " ", " ", " ", " ", " ", " ", " "],
-      [" ", " ", " ", " ", " ", " ", " ", " "],
-      [" ", " ", " ", "›", "œ", " ", " ", " "],
-      [" ", " ", " ", "œ", "›", " ", " ", " "],
-      [" ", " ", " ", " ", " ", " ", " ", " "],
-      [" ", " ", " ", " ", " ", " ", " ", " "],
-      [" ", " ", " ", " ", " ", " ", " ", " "]
+      ["â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡"],
+      ["â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡"],
+      ["â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡"],
+      ["â–¡", "â–¡", "â–¡", "â—‹", "â—", "â–¡", "â–¡", "â–¡"],
+      ["â–¡", "â–¡", "â–¡", "â—", "â—‹", "â–¡", "â–¡", "â–¡"],
+      ["â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡"],
+      ["â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡"],
+      ["â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡", "â–¡"]
     ]
 
     turn = "black"
@@ -39,7 +39,7 @@ module.exports = (robot) ->
     robot.brain.set("turn", turn)
 
     msg.send outputBord(bordArray)
-    msg.send outputTurn(turn) + "‚©‚çƒXƒ^[ƒg‚Å‚·B"
+    msg.send outputTurn(turn) + "ã‹ã‚‰ã‚¹ã‚¿ãƒ¼ãƒˆã§ã™ã€‚"
 
 
   robot.hear /navico set(\s[ABCDEFGH]{1}[12345678]{1})/i, (msg) ->
@@ -51,7 +51,7 @@ module.exports = (robot) ->
     y = point[1].charCodeAt(0) - 65
 
     if !checkPosition(bordArray, x, y)
-      msg.send "’u‚¯‚Ü‚¹‚ñBA"
+      msg.send "ç½®ã‘ã¾ã›ã‚“ã€‚A"
       return
 
     list = []
@@ -65,7 +65,7 @@ module.exports = (robot) ->
     list = checkHidariShita(bordArray, list, x, y, turn)
 
     if list.length == 0
-      msg.send "’u‚¯‚Ü‚¹‚ñBB"
+      msg.send "ç½®ã‘ã¾ã›ã‚“ã€‚B"
       return
 
     bordArray = updateBord(bordArray, list, x, y, turn)
@@ -80,31 +80,31 @@ module.exports = (robot) ->
       return
 
     msg.send outputBord(bordArray)
-    msg.send "Ÿ‚ÍA" + outputTurn(turn) + "‚Ìƒ^[ƒ“‚Å‚·B"
+    msg.send "æ¬¡ã¯ã€" + outputTurn(turn) + "ã®ã‚¿ãƒ¼ãƒ³ã§ã™ã€‚"
 
 
 outputBord = (ba) ->
   retmsg = "....A.B..C.D..E..F..G.H\n" +
-      "‚P#{ba[0][0]}#{ba[0][1]}#{ba[0][2]}#{ba[0][3]}#{ba[0][4]}#{ba[0][5]}#{ba[0][6]}#{ba[0][7]}\n" +
-      "‚Q#{ba[1][0]}#{ba[1][1]}#{ba[1][2]}#{ba[1][3]}#{ba[1][4]}#{ba[1][5]}#{ba[1][6]}#{ba[1][7]}\n" +
-      "‚R#{ba[2][0]}#{ba[2][1]}#{ba[2][2]}#{ba[2][3]}#{ba[2][4]}#{ba[2][5]}#{ba[2][6]}#{ba[2][7]}\n" +
-      "‚S#{ba[3][0]}#{ba[3][1]}#{ba[3][2]}#{ba[3][3]}#{ba[3][4]}#{ba[3][5]}#{ba[3][6]}#{ba[3][7]}\n" +
-      "‚T#{ba[4][0]}#{ba[4][1]}#{ba[4][2]}#{ba[4][3]}#{ba[4][4]}#{ba[4][5]}#{ba[4][6]}#{ba[4][7]}\n" +
-      "‚U#{ba[5][0]}#{ba[5][1]}#{ba[5][2]}#{ba[5][3]}#{ba[5][4]}#{ba[5][5]}#{ba[5][6]}#{ba[5][7]}\n" +
-      "‚V#{ba[6][0]}#{ba[6][1]}#{ba[6][2]}#{ba[6][3]}#{ba[6][4]}#{ba[6][5]}#{ba[6][6]}#{ba[6][7]}\n" +
-      "‚W#{ba[7][0]}#{ba[7][1]}#{ba[7][2]}#{ba[7][3]}#{ba[7][4]}#{ba[7][5]}#{ba[7][6]}#{ba[7][7]}\n"
+      "ï¼‘#{ba[0][0]}#{ba[0][1]}#{ba[0][2]}#{ba[0][3]}#{ba[0][4]}#{ba[0][5]}#{ba[0][6]}#{ba[0][7]}\n" +
+      "ï¼’#{ba[1][0]}#{ba[1][1]}#{ba[1][2]}#{ba[1][3]}#{ba[1][4]}#{ba[1][5]}#{ba[1][6]}#{ba[1][7]}\n" +
+      "ï¼“#{ba[2][0]}#{ba[2][1]}#{ba[2][2]}#{ba[2][3]}#{ba[2][4]}#{ba[2][5]}#{ba[2][6]}#{ba[2][7]}\n" +
+      "ï¼”#{ba[3][0]}#{ba[3][1]}#{ba[3][2]}#{ba[3][3]}#{ba[3][4]}#{ba[3][5]}#{ba[3][6]}#{ba[3][7]}\n" +
+      "ï¼•#{ba[4][0]}#{ba[4][1]}#{ba[4][2]}#{ba[4][3]}#{ba[4][4]}#{ba[4][5]}#{ba[4][6]}#{ba[4][7]}\n" +
+      "ï¼–#{ba[5][0]}#{ba[5][1]}#{ba[5][2]}#{ba[5][3]}#{ba[5][4]}#{ba[5][5]}#{ba[5][6]}#{ba[5][7]}\n" +
+      "ï¼—#{ba[6][0]}#{ba[6][1]}#{ba[6][2]}#{ba[6][3]}#{ba[6][4]}#{ba[6][5]}#{ba[6][6]}#{ba[6][7]}\n" +
+      "ï¼˜#{ba[7][0]}#{ba[7][1]}#{ba[7][2]}#{ba[7][3]}#{ba[7][4]}#{ba[7][5]}#{ba[7][6]}#{ba[7][7]}\n"
 
 
 outputTurn = (turn) ->
-  if turn == "black" then "•" else "”’"
+  if turn == "black" then "é»’" else "ç™½"
 
 
 outputEnding = (ba) ->
-  retmsg = "ƒQ[ƒ€‚ªI—¹‚µ‚Ü‚µ‚½B‚¨”æ‚ê—l‚Å‚µ‚½B"
+  retmsg = "ã‚²ãƒ¼ãƒ ãŒçµ‚äº†ã—ã¾ã—ãŸã€‚ãŠç–²ã‚Œæ§˜ã§ã—ãŸã€‚"
 
 
 updateBord = (ba, lists, x, y, turn) ->
-  stone = if turn == "black" then "œ" else "›"
+  stone = if turn == "black" then "â—" else "â—‹"
 
   ba[x][y] = stone
 
@@ -119,14 +119,14 @@ changeTurn = (turn) ->
 
 
 checkPosition = (ba, x, y) ->
-  isEmpty = if ba[x][y] == " " then true else false
+  isEmpty = if ba[x][y] == "â–¡" then true else false
 
 
 checkGameEnd = (ba) ->
   isEnd = true
   for x in [0..7]
     for y in [0..7]
-      if ba[x][y] == " "
+      if ba[x][y] == "â–¡"
         isEnd = false
         break
 
@@ -135,12 +135,12 @@ checkShita = (ba, list, x, y, turn) ->
   hitStoneList = []
   count = 0
   hit = false
-  myStone = if turn == "black" then "œ" else "›"
-  searchStone = if turn == "black" then "›" else "œ"
+  myStone = if turn == "black" then "â—" else "â—‹"
+  searchStone = if turn == "black" then "â—‹" else "â—"
 
   if x < 7
     for i in [(x + 1)...7]
-      if ba[i][y] == " "
+      if ba[i][y] == "â–¡"
         break
 
       if ba[i][y] == myStone && count == 0
@@ -164,12 +164,12 @@ checkMigi = (ba, list, x, y, turn) ->
   hitStoneList = []
   count = 0
   hit = false
-  myStone = if turn == "black" then "œ" else "›"
-  searchStone = if turn == "black" then "›" else "œ"
+  myStone = if turn == "black" then "â—" else "â—‹"
+  searchStone = if turn == "black" then "â—‹" else "â—"
 
   if y < 7
     for i in [(y + 1)...7]
-      if ba[x][i] == " "
+      if ba[x][i] == "â–¡"
         break
 
       if ba[x][i] == myStone && count == 0
@@ -193,12 +193,12 @@ checkUe = (ba, list, x, y, turn) ->
   hitStoneList = []
   count = 0
   hit = false
-  myStone = if turn == "black" then "œ" else "›"
-  searchStone = if turn == "black" then "›" else "œ"
+  myStone = if turn == "black" then "â—" else "â—‹"
+  searchStone = if turn == "black" then "â—‹" else "â—"
 
   if x > 0
     for i in [(x - 1)...0]
-      if ba[i][y] == " "
+      if ba[i][y] == "â–¡"
         break
 
       if ba[i][y] == myStone && count == 0
@@ -222,12 +222,12 @@ checkHidari = (ba, list, x, y, turn) ->
   hitStoneList = []
   count = 0
   hit = false
-  myStone = if turn == "black" then "œ" else "›"
-  searchStone = if turn == "black" then "›" else "œ"
+  myStone = if turn == "black" then "â—" else "â—‹"
+  searchStone = if turn == "black" then "â—‹" else "â—"
 
   if y > 0
     for i in [(y - 1)...0]
-      if ba[x][i] == " "
+      if ba[x][i] == "â–¡"
         break
 
       if ba[x][i] == myStone && count == 0
@@ -251,12 +251,12 @@ checkHidariUe = (ba, list, x, y, turn) ->
   hitStoneList = []
   count = 0
   hit = false
-  myStone = if turn == "black" then "œ" else "›"
-  searchStone = if turn == "black" then "›" else "œ"
+  myStone = if turn == "black" then "â—" else "â—‹"
+  searchStone = if turn == "black" then "â—‹" else "â—"
 
   if x > 0
     for i in [(x - 1)...0]
-      if ba[i][(y - (x - i))] == " "
+      if ba[i][(y - (x - i))] == "â–¡"
         break
 
       if ba[i][(y - (x - i))] == myStone && count == 0
@@ -280,12 +280,12 @@ checkHidariShita = (ba, list, x, y, turn) ->
   hitStoneList = []
   count = 0
   hit = false
-  myStone = if turn == "black" then "œ" else "›"
-  searchStone = if turn == "black" then "›" else "œ"
+  myStone = if turn == "black" then "â—" else "â—‹"
+  searchStone = if turn == "black" then "â—‹" else "â—"
 
   if x > 7
     for i in [(x + 1)...7]
-      if ba[i][(y - (i - x))] == " "
+      if ba[i][(y - (i - x))] == "â–¡"
         break
 
       if ba[i][(y - (i - x))] == myStone && count == 0
@@ -309,12 +309,12 @@ checkMigiUe = (ba, list, x, y, turn) ->
   hitStoneList = []
   count = 0
   hit = false
-  myStone = if turn == "black" then "œ" else "›"
-  searchStone = if turn == "black" then "›" else "œ"
+  myStone = if turn == "black" then "â—" else "â—‹"
+  searchStone = if turn == "black" then "â—‹" else "â—"
 
   if x > 0
     for i in [(x - 1)...0]
-      if ba[i][(y + (x - i))] == " "
+      if ba[i][(y + (x - i))] == "â–¡"
         break
 
       if ba[i][(y + (x - i))] == myStone && count == 0
@@ -338,12 +338,12 @@ checkMigiShita = (ba, list, x, y, turn) ->
   hitStoneList = []
   count = 0
   hit = false
-  myStone = if turn == "black" then "œ" else "›"
-  searchStone = if turn == "black" then "›" else "œ"
+  myStone = if turn == "black" then "â—" else "â—‹"
+  searchStone = if turn == "black" then "â—‹" else "â—"
 
   if x > 7
     for i in [(x + 1)...7]
-      if ba[i][(y + (i - x))] == " "
+      if ba[i][(y + (i - x))] == "â–¡"
         break
 
       if ba[i][(y + (i - x))] == myStone && count == 0
