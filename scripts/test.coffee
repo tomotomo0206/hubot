@@ -33,6 +33,29 @@ module.exports = (robot) ->
    robot.hear  /wifi/i, (msg) ->
     msg.reply "carviewwireless,carviewSecurityWireless or carviewguest,carviewGuestAccess"
     
+  # redisに保存するためのキー
+  KEY_DERBY_POINTS = 'derby_points'
+
+  # 対象と点数を指定
+  robot.hear /^(.*)さんに([0-9]+)点/, (msg) ->
+    name  = msg.match[1]
+    points = (robot.brain.get KEY_DERBY_POINTS) or {}
+    points[name] = (points[name] or 0) + Number(msg.match[2])
+
+    robot.brain.set KEY_DERBY_POINTS, points
+
+    msg.send "#{name}さん: #{points[name]}点"
+
+  # 点数の合計を表示
+  robot.respond /derby list/i, (msg) ->
+    points = (robot.brain.get KEY_DERBY_POINTS) or {}
+    for name, point of points
+      msg.send "#{name}さん: #{point}点"
+
+  # 点数をリセット
+  robot.respond /derby reset/i, (msg) ->
+    robot.brain.set KEY_DERBY_POINTS, {}
+    msg.send "reset: done"
     
   robot.hear /(.*)の天気/i, (msg) ->
    switch msg.match[1]
