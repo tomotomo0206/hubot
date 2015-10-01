@@ -30,6 +30,10 @@ module.exports = (robot) ->
   robot.hear  /運行/i, (msg) ->
     msg.reply "http://transit.yahoo.co.jp/traininfo/area/4/"
     
+   robot.hear  /wifi/i, (msg) ->
+    msg.reply "carviewwireless,carviewSecurityWireless or carviewguest,carviewGuestAccess"
+    
+    
   robot.hear /(.*)の天気/i, (msg) ->
    switch msg.match[1]
       when '今日'
