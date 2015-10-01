@@ -21,7 +21,7 @@ module.exports = (robot) ->
     msg.send "あるよっ:sushi:"
 
 
-  robot.hear /navico game start/i, (msg) ->
+  robot.hear /hubot game start/i, (msg) ->
     bordArray = [
       ["□", "□", "□", "□", "□", "□", "□", "□"],
       ["□", "□", "□", "□", "□", "□", "□", "□"],
@@ -42,7 +42,7 @@ module.exports = (robot) ->
     msg.send outputTurn(turn) + "からスタートです。"
 
 
-  robot.hear /navico set(\s[ABCDEFGH]{1}[12345678]{1})/i, (msg) ->
+  robot.hear /hubot set(\s[ABCDEFGH]{1}[12345678]{1})/i, (msg) ->
     bordArray = robot.brain.get("ba")
     turn = robot.brain.get("turn")
 
