@@ -18,7 +18,7 @@ module.exports = (robot) ->
 
 
   robot.hear  /アカウント/i, (msg) ->
-    msg.reply "ID: cv_operation_group@carview.co.jp　PASS:6165!appleCV"
+    msg.reply "cv_tech_qa@carview.co.jp　PASS:6165!appleCV"
 
   robot.hear  /神/i, (msg) ->
     msg.reply "綱様"
