@@ -19,9 +19,8 @@ module.exports = (robot) ->
     msg.reply msg.random ram
   robot.hear /ra-men/i, (msg) ->
     msg.reply msg.random ram
-  robot.hear /ﾗｰﾒﾝ/i, (msg) ->
+  robot.hear /ラーメソ/i, (msg) ->
     msg.reply msg.random ram
-    
     
   robot.hear  /アカウント/i, (msg) ->
     msg.reply "cv_tech_qa@carview.co.jp　PASS:6165!appleCV"
