@@ -15,11 +15,11 @@ ram = ['たまにはラーメン以外も食べましょう','味噌ラーメン
 module.exports = (robot) ->
   robot.hear /ラーメン/i, (msg) ->
     msg.reply msg.random ram
-robot.hear /らーめん/i, (msg) ->
+  robot.hear /らーめん/i, (msg) ->
     msg.reply msg.random ram
-robot.hear /ra-men/i, (msg) ->
+  robot.hear /ra-men/i, (msg) ->
     msg.reply msg.random ram
-robot.hear /ﾗｰﾒﾝ/i, (msg) ->
+  robot.hear /ﾗｰﾒﾝ/i, (msg) ->
     msg.reply msg.random ram
     
     
