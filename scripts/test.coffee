@@ -10,13 +10,19 @@
 
 module.exports = (robot) ->
 
-ram = ['味噌ラーメンがオススメ', '豚骨ラーメンがオススメ', '塩ラーメンがオススメ', '醤油ラーメンがオススメ', '社畜カップ麺がオススメ', '天下一品こってりラーメンがオススメ', 'お前なんかチキンラーメンの丼齧ってろ']
+ram = ['たまにはラーメン以外も食べましょう','味噌ラーメンがオススメ', '豚骨ラーメンがオススメ', '塩ラーメンがオススメ', '醤油ラーメンがオススメ', '社畜カップ麺がオススメ', '天下一品こってりラーメンがオススメ', 'お前なんかチキンラーメンの丼齧ってろ']
 
 module.exports = (robot) ->
   robot.hear /ラーメン/i, (msg) ->
     msg.reply msg.random ram
-
-
+robot.hear /らーめん/i, (msg) ->
+    msg.reply msg.random ram
+robot.hear /ra-men/i, (msg) ->
+    msg.reply msg.random ram
+robot.hear /ﾗｰﾒﾝ/i, (msg) ->
+    msg.reply msg.random ram
+    
+    
   robot.hear  /アカウント/i, (msg) ->
     msg.reply "cv_tech_qa@carview.co.jp　PASS:6165!appleCV"
 
