@@ -22,7 +22,7 @@ module.exports = (robot) ->
   robot.hear /ラーメソ/i, (msg) ->
     msg.reply msg.random ram
     
-  robot.hear  /アカウント/i, (msg) ->
+  robot.hear  /アップルID/i, (msg) ->
     msg.reply "cv_tech_qa@carview.co.jp　PASS:6165!appleCV"
 
   robot.hear  /神/i, (msg) ->
