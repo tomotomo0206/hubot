@@ -42,6 +42,4 @@ module.exports = (robot) ->
     robot.send {room: "#general"}, "明日もユーザーファーストの精神で頑張りましょう"
   , null, true, "Asia/Tokyo"
 
-  new cron '0 40 18 * * 1-5', () =>
-    robot.send {room: "#general"}, "本日の工数入力は忘れていませんか？"
-  , null, true, "Asia/Tokyo"
+
