@@ -42,7 +42,7 @@ module.exports = (robot) ->
    robot.hear  /wifi/i, (msg) ->
     msg.reply "carviewwireless,carviewSecurityWireless or carviewguest,carviewGuestAccess"
     
-    robot.hear  /画像テスト/i, (msg) ->
+   robot.hear  /画像テスト/i, (msg) ->
     msg.reply "http://cdn.snsimg.carview.co.jp/carlife/storage/2480792/plus/bb7b9e10f1.jpg?ct=a641d2c6ec69"
     
     
