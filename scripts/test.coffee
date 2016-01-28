@@ -35,7 +35,6 @@ module.exports = (robot) ->
   robot.hear  /寿限無/i, (msg) ->
     msg.reply "じゅげむ　じゅげむ　ごこうのすりきれ　かいじゃりすいぎょの　すいぎょうまつ　うんらいまつ　ふうらいまつ　くうねるところにすむところ　やぶらこうじのぶらこうじ　ぱいぽ　ぱいぽ　ぱいぽのしゅーりんがん　しゅーりんがんのぐーりんだい　ぐーりんだいのぽんぽこぴーの　ぽんぽこなーの　ちょうきゅうめいのちょうすけ"
 
-
   robot.hear  /運行/i, (msg) ->
     msg.reply "http://transit.yahoo.co.jp/traininfo/area/4/"
     
