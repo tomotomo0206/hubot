@@ -11,7 +11,7 @@
 module.exports = (robot) ->
 
 ram = ['たまにはラーメン以外も食べましょう','味噌ラーメンがオススメ', '豚骨ラーメンがオススメ', '塩ラーメンがオススメ', '醤油ラーメンがオススメ', '社畜カップ麺がオススメ', '天下一品こってりラーメンがオススメ', 'お前なんかチキンラーメンの丼齧ってろ']
-ram2 = ['http://nekoore.com/wp/wp-content/uploads/2014/05/201312seven-dwarfs-cosplay-1.jpg','http://img01.boo-log.com/usr/nekopon/%E9%AC%BC%E3%81%8B%E3%81%B6%E3%82%8A%E3%82%82%E3%81%AE.png','http://chatnoir666.com/wp-content/uploads/2015/03/knuttz-ueba-305111.jpg', 'http://tetoan.com/wp-content/uploads/2015/05/%E8%A2%8B%E3%81%AB%E5%85%A5%E3%81%A3%E3%81%9F%E3%83%9A%E3%83%AB%E3%82%B7%E3%83%A3%E7%8C%AB.jpg', 'https://i.ytimg.com/vi/FF2r7mnf180/maxresdefault.jpg', 'http://nekogazou.com/wp-content/uploads/2013/03/1104.jpg', 'http://myu-cat.jp/file/parts/I0000002/ab8097822341c1e2c4e8f0aecd239b98.jpg', 'http://ecx.images-amazon.com/images/I/41V1me-RnKL.jpg', 'http://nekopple.com/wp-content/uploads/2015/09/image.jpeg']
+ram2 = ['http://angel.ap.teacup.com/mirin/img/1244108709.jpg','http://nekoore.com/wp/wp-content/uploads/2014/05/201312seven-dwarfs-cosplay-1.jpg','http://img01.boo-log.com/usr/nekopon/%E9%AC%BC%E3%81%8B%E3%81%B6%E3%82%8A%E3%82%82%E3%81%AE.png','http://chatnoir666.com/wp-content/uploads/2015/03/knuttz-ueba-305111.jpg', 'http://tetoan.com/wp-content/uploads/2015/05/%E8%A2%8B%E3%81%AB%E5%85%A5%E3%81%A3%E3%81%9F%E3%83%9A%E3%83%AB%E3%82%B7%E3%83%A3%E7%8C%AB.jpg', 'https://i.ytimg.com/vi/FF2r7mnf180/maxresdefault.jpg', 'http://nekogazou.com/wp-content/uploads/2013/03/1104.jpg', 'http://myu-cat.jp/file/parts/I0000002/ab8097822341c1e2c4e8f0aecd239b98.jpg', 'http://ecx.images-amazon.com/images/I/41V1me-RnKL.jpg', 'http://nekopple.com/wp-content/uploads/2015/09/image.jpeg']
 
 module.exports = (robot) ->
   robot.hear /ラーメン/i, (msg) ->
