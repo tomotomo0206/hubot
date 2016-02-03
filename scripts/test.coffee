@@ -54,7 +54,7 @@ module.exports = (robot) ->
   robot.hear  /wifi/i, (msg) ->
     msg.reply "carviewwireless,carviewSecurityWireless or carviewguest,carviewGuestAccess"
     
-  robot.hear  /ハボi/i, (msg) ->
+  robot.hear  /ハボ/i, (msg) ->
     msg.reply "ハボとはユーザーファースト推進室のみんなのアイドルのことです。"
     
 
