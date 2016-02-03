@@ -51,10 +51,10 @@ module.exports = (robot) ->
   robot.hear  /運行/i, (msg) ->
     msg.reply "http://transit.yahoo.co.jp/traininfo/area/4/"
     
-   robot.hear  /wifi/i, (msg) ->
+  robot.hear  /wifi/i, (msg) ->
     msg.reply "carviewwireless,carviewSecurityWireless or carviewguest,carviewGuestAccess"
     
-   robot.hear  /ハボi/i, (msg) ->
+  robot.hear  /ハボi/i, (msg) ->
     msg.reply "ハボとはユーザーファースト推進室のみんなのアイドルのことです。"
     
 
