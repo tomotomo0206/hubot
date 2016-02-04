@@ -57,6 +57,8 @@ module.exports = (robot) ->
   robot.hear  /ハボ/i, (msg) ->
     msg.reply "ハボとはユーザーファースト推進室のみんなのアイドルのことです。"
     
+  robot.hear  /仙道/i, (msg) ->
+    msg.reply "http://blog-imgs-61.fc2.com/h/o/m/homet713homet/awateru01.jpg"
 
     
     
