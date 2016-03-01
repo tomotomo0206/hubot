@@ -60,8 +60,12 @@ module.exports = (robot) ->
   robot.hear  /仙道/i, (msg) ->
     msg.reply "http://blog-imgs-61.fc2.com/h/o/m/homet713homet/awateru01.jpg"
 
-    
-    
+  robot.hear  /胸糞悪い/i, (msg) ->
+    msg.reply "https://pbs.twimg.com/media/Cb1FR-IUcAAvgGY.jpg"
+
+  robot.hear  /事なきを得る/i, (msg) ->
+    msg.reply "http://feely.jp/wp-content/uploads/2015/08/kotonaki.png"
+
   # redisに保存するためのキー
   KEY_DERBY_POINTS = 'derby_points'
 
