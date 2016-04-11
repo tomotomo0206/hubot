@@ -33,6 +33,8 @@ module.exports = (robot) ->
   robot.hear /安西先生/i, (msg) ->
     msg.reply  "諦めたらそこで試合終了ですよ"
 
+  robot.hear /春眠/i, (msg) ->
+    msg.reply  "春眠不觉晓，处处闻啼鸟。夜来风雨声，花落知多少"
 
   robot.hear  /アップルID/i, (msg) ->
     msg.reply "cv_tech_qa@carview.co.jp　PASS:6165!appleCV"
